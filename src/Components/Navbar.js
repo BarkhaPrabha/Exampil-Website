@@ -1,4 +1,4 @@
-import logo from './image/exampil-logo.png';
+ import logo from './image/exampil-logo.png';
 import React, {useState} from 'react';
 import {Link} from 'react-router-dom';
 import CloseIcon from '@mui/icons-material/Close';

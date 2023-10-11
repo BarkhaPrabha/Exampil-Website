@@ -17,6 +17,37 @@
   padding:0;
   box-sizing:border-box;
   }
+section{
+ height: 100vh;
+}
+  .clouds{
+    width: 360px;
+    height: 90px;
+    background: rgb(254, 251, 240);
+    border-radius: 50%;
+    filter: url(#filter-back);
+     margin-top: 20px;
+  }
+
+.clouds2{
+    width: 350px;
+    height: 80px;
+    background: rgb(254, 251, 240);
+    border-radius: 50%;
+    filter: url(#filter-last);
+    margin-top: 32px;
+  }
+  .clouds1{
+    width: 1220px;
+    height: 120px;
+    background: rgb(254, 251, 240);
+    border-radius: 50%;
+    filter: url(#filter-mid);
+  }
+  
+.cloud-d{
+  display: flex;
+}
 
 header {
   display: flex;
@@ -81,14 +112,114 @@ header {
   padding: 50px;
 }
 
+.bg{
+  background-color: rgb(58, 10, 54); 
+  height: 85vh;
+  width: 100%;
+  box-sizing: border-box; 
+}
 .title{
-  background-color: rgb(58, 10, 54);
   height: 100%;
   width: auto;
   margin: 0;
   position: relative;
-  
+  overflow: hidden;
+  box-sizing: border-box;
 }
+
+@media (min-width: 1098px) {
+  .bg{
+    height: 95vh;
+  }
+}
+@media (min-width: 825px) and (max-width: 1179px){
+  .bg{
+    height: 160vh;
+  }
+}
+@media (max-width: 825px) {
+  .bg{
+    height: 85vh;
+  }
+  .title{
+    overflow: hidden;
+  }
+}
+@media (min-width: 1180px) and (max-width: 1192px){
+  .bg{
+    height: 110vh;
+  }
+  .title{
+    overflow: hidden;
+  }
+}
+@media (max-width: 1179px) {                        
+  .title{
+    overflow: hidden;         
+  }
+  .bg{
+    height: 155vh;
+  }
+  .clouds2{
+    width: 470px;
+    height: 190px;
+   
+  }
+  .clouds{
+    width: 490px;
+    height: 170px;
+  }
+  .clouds1{
+      width: 1280px;
+      height: 210px;
+    }
+  .cloud-d{
+    margin-top: 20px;
+  }
+}
+@media (max-width: 700px) {  
+  .clouds1{
+    width: 2500px;
+    height: 150px;
+  }
+  .clouds{
+    display: none;
+  }
+  .clouds2{
+    display: none;
+  }
+
+}
+
+@media (min-width: 700px) and (max-width: 1179px){
+  .clouds1{
+    width: 1800px;
+    height: 160px;
+  }
+  .clouds{
+    width: 1090px;
+    height: 130px;
+  }
+  .clouds2{
+    display: none;
+  }
+  .cloud-d{
+    margin-top: 30px;
+  }
+}
+@media (max-width: 400px) { 
+  .bg {
+    height: 152vh;
+  }
+  .clouds1{
+    width: 1220px;
+    height: 120px;
+  }
+  .cloud-d{
+    margin-top: 30px;
+  }
+}
+
 .flex {
   display: flex;
   flex-wrap: wrap;
@@ -104,7 +235,7 @@ header {
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
-  padding: 70px 20px 40px 20px;
+  padding: 55px 20px 40px 20px;
 }
 
 #form {
@@ -114,6 +245,8 @@ header {
   max-width: 800px;
   margin: 0;
   min-width: 350px;
+  max-height: 500px;
+  margin-bottom: 25px;
 }
 
 .common{
@@ -203,7 +336,6 @@ input {
   }
   .menu {
     display: none; 
-    
   }
 }
 
@@ -222,7 +354,7 @@ input {
 .sub h3{
   padding-top: 20px;
   letter-spacing: 1px;
-  font-size: 30px;
+  font-size: 35px;
 }
 .box{
   display:flex;
@@ -230,9 +362,11 @@ input {
   margin-bottom: 60px;
   justify-content: space-between;
   border-radius: 14px;
-  filter: drop-shadow(0px 20px 6px black);
+  box-shadow: 1px 62px 30px -35px rgba(0,0,0,0.71);
 }
-
+.box-1 h3{
+  padding: 0 17px 0 17px ;
+}
 .container .title1{
   height: 450px;
 }
@@ -253,14 +387,13 @@ input {
   padding: 15px 60px ;
   right: 0;
 
-  
 }
 .para{
-  font-size: 2.2em;
+  font-size: 2.5em;
   text-align: left;
-  padding-top: 25px;
+  padding-top: 30px;
   font-weight: 600;
-  padding: 25px 10px 25px 10px;
+  padding: 35px 10px 35px 10px;
 }
 
 .container .head {
@@ -269,7 +402,7 @@ input {
 .head h2 {
   color:rgb(69, 19, 68);
   text-align: center;
-  font-size: 2.28em;
+  font-size: 2.3em;
   padding-bottom: 25px;
 }
 
@@ -310,6 +443,7 @@ form {
   margin: 0 auto;
   padding: 20px;
   border-radius: 5px;
+  
 }
 .login-btn{
   font-weight: 600;
@@ -383,6 +517,8 @@ span{
 
 .duplicate{
   padding-bottom: 0;
+  height: 90%;
+ 
 }
 @media (max-width: 648px) {
   .box{

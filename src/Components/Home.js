@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import logo1 from './image/icon1.png';
 import logo2 from './image/icon2.jpg';
-import logo4 from './image/cloud2.png';
+// import logo4 from './image/cloud2.png';
 
 const Home = () => {
 
@@ -55,7 +55,7 @@ const Home = () => {
       };
   return (
     <>
-    <section>
+    <section className="bg">
         <div className="title">
             <div className="container duplicate">
                 <div className="flex ">
@@ -86,10 +86,33 @@ const Home = () => {
                         </div>
                     </form>
                 </div>
-            </div>
-            <div class ="clouds">
-                <img src={logo4} style ={{['--i']:2, height:"160px", width: "100%"}}/>       
-            </div>
+                <div className="cloud-d">
+                  <div className="clouds2">
+                    <svg width="0" height="0">
+                      <filter id="filter-last">
+                          <feTurbulence type="fractalNoise" baseFrequency="0.01" numOctaves="4"/>
+                          <feDisplacementMap  in="SourceGraphic" scale="50" />
+                      </filter>
+                    </svg>
+                </div>
+                  <div className ="clouds">
+                    <svg width="0" height="0">
+                      <filter id="filter-back">
+                          <feTurbulence type="fractalNoise" baseFrequency="0.015" numOctaves="3"/>
+                          <feDisplacementMap  in="SourceGraphic" scale="30" />
+                      </filter>
+                    </svg>
+                  </div>
+                  <div className="clouds1">
+                    <svg width="0" height="0">
+                      <filter id="filter-mid">
+                          <feTurbulence type="fractalNoise" baseFrequency="0.01" numOctaves="4"/>
+                          <feDisplacementMap  in="SourceGraphic" scale="50" />
+                      </filter>
+                    </svg>
+                  </div>
+                </div>
+            </div>  
         </div>
     </section>
     <section>
